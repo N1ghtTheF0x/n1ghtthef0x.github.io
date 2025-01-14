@@ -1,0 +1,11 @@
+#top-3ds {
+    width: 400px;
+    height: 215px;
+    overflow: hidden;
+}
+#bottom-3ds {
+    width: 320px;
+    height: 212px;
+    overflow: hidden;
+    margin: 0 40px 28px;
+}
