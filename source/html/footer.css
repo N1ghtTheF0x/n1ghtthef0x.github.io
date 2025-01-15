@@ -1,0 +1,10 @@
+footer {
+    font-style: italic;
+    color: white;
+    background-color: rgb(60, 60, 60);
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    user-select: none;
+}

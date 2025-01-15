@@ -9,3 +9,14 @@ export function loadImage(src: string)
     img.src = src
     return img
 }
+
+export function loadImageAsync(src: string)
+{
+    return new Promise<HTMLImageElement>((resolve,reject) =>
+    {
+        const img = new Image
+        img.src = src
+        img.onload = () => resolve(img)
+        img.onerror = () => reject()
+    })
+}

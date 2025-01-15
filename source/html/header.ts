@@ -1,19 +1,25 @@
-import { createElementWithContent, createElementWithId } from "./element"
-import Navigation from "./navigation"
-import { seperator } from "./utils"
+import { createHeading } from "./heading"
+import { loadImage } from "./utils"
+import "./header.css"
 
-export const ID = "header"
+function _load_icon()
+{
+    const icon = loadImage("/favicon.ico")
+
+    icon.id = "header-icon"
+
+    return icon
+}
 
 function Header()
 {
-    const header = createElementWithId("header",ID)
+    const header = document.createElement("header")
 
-    const title = createElementWithContent("h1",document.title)
+    const title = createHeading("")
+    title.append(_load_icon(),document.title)
 
     header.append(
-        title,
-        seperator(),
-        Navigation()
+        title
     )
     return header
 }

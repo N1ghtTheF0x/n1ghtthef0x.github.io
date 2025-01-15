@@ -10,7 +10,10 @@ const config = defineConfig({
         legacy({
             targets: ["last 2 versions and dead","> 0.3%","Firefox ESR"]
         })
-    ]
+    ],
+    define: {
+        __LAST_UPDATED: JSON.stringify(new Date().toISOString())
+    }
 })
 
 export default config
