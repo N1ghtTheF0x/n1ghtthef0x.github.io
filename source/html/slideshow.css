@@ -5,15 +5,9 @@
 
 .slideshow-image-item {
     height: 200px;
-    transition: 0.5s;
     filter: grayscale(75%);
 }
 
 .slideshow-image-item:hover {
-    transform: scale(1.1);
     filter: none;
-}
-
-.slideshow-image-item:active {
-    transform: scale(0.9);
 }

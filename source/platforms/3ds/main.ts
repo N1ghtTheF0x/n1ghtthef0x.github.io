@@ -4,8 +4,8 @@ import { APP_DIV } from "../../utils"
 import Header from "../../html/header"
 import Navigation from "../../html/navigation"
 import { seperator } from "../../html/utils"
-import Content from "../../html/content"
 import Footer from "../../html/footer"
+import { MAIN } from "../../html/content"
 
 export const is3DS = navigator.userAgent.indexOf("Nintendo 3DS") > -1
 
@@ -14,6 +14,7 @@ export const BOTTOM_SCREEN_3DS = createElementWithId("div","bottom-3ds")
 
 function init3DSPlatform()
 {
+    console.info("loading 3ds platform")
     // viewport shit
     const viewport = document.querySelector("meta[name=viewport]")
     viewport?.setAttribute("content","width=400, initial-scale=1")
@@ -23,13 +24,13 @@ function init3DSPlatform()
     APP_DIV.append(TOP_SCREEN_3DS,BOTTOM_SCREEN_3DS)
 
     TOP_SCREEN_3DS.append(
-        Header()
+        Header(),
+        Footer()
     )
     BOTTOM_SCREEN_3DS.append(
         Navigation(),
         seperator(),
-        Content(),
-        Footer()
+        MAIN
     )
 }
 

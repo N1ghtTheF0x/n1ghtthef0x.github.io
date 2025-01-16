@@ -1,8 +1,11 @@
+import { createElementWithId } from "./element"
 import "./footer.css"
+
+export const FOOTER_ID = "end-of-page"
 
 function Footer()
 {
-    const footer = document.createElement("footer")
+    const footer = createElementWithId("footer",FOOTER_ID)
     footer.innerText = `last updated: ${__LAST_UPDATED}`
     console.log()
     return footer

@@ -1,4 +1,16 @@
-#header-icon {
-    width: 128px;
-    image-rendering: pixelated;
+#header-icon:active {
+    
+}
+
+#header-title {
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+.header-title-char:hover {
+    color: darkcyan;
+}
+
+.header-title-char:active {
+    color: cyan;
 }

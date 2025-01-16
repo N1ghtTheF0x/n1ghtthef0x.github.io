@@ -1,10 +1,8 @@
-import { createAnchor } from "./anchor"
 import Table from "./table"
 import "./navigation.css"
-
-const entries: Record<string,string> = {
-    
-}
+import { createButton } from "./button"
+import { HIGHLIGHT_CLASS, resolveContent } from "./utils"
+import { CONTENT, initContent } from "./content"
 
 export const NAV_ITEM_CLASS = "nav-item"
 
@@ -14,16 +12,23 @@ function Navigation()
 
     const table = new Table
 
-    for(const [name,hash] of Object.entries(entries))
+    const buttons = Object.keys(CONTENT)
+    .map((name) =>
     {
-        const anchor = createAnchor(`#${hash}`,name)
-        anchor.classList.add(NAV_ITEM_CLASS)
-        table.addBodyRow(new Table.Cell(anchor))
-    }
+        const button = createButton(name,() =>
+        {
+            location.hash = name
+            initContent()
+        })
+        button.classList.add(NAV_ITEM_CLASS,HIGHLIGHT_CLASS)
+        return button
+    })
+    const cell = new Table.Cell(...buttons)
+    table.addBodyRow(cell)
 
-    nav.append(
-        table.domElement
-    )
+    nav.append(...resolveContent([
+        table
+    ]))
     return nav
 }
 

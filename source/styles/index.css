@@ -7,3 +7,11 @@ body {
 a {
     color: cyan;
 }
+
+header {
+    user-select: none;
+}
+
+img {
+    image-rendering: pixelated;
+}

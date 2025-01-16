@@ -1,4 +1,4 @@
-import { HTMLContent } from "./utils"
+import { HTMLContentLike, IElement, resolveContent } from "./utils"
 
 class Table
 {
@@ -28,7 +28,7 @@ class Table
         this._body.append(...rows.map((row) => row.domElement))
         return this
     }
-    public addHeaderRow(...items: Array<HTMLContent>)
+    public addHeaderRow(...items: Array<HTMLContentLike>)
     {
         return this.appendHeader(new Table.Header(...items))
     }
@@ -42,23 +42,23 @@ namespace Table
 {
     export interface Init
     {
-        header?: Array<HTMLContent>
-        body?: Array<Array<Array<HTMLContent>>>
+        header?: Array<HTMLContentLike>
+        body?: Array<Array<Array<HTMLContentLike>>>
     }
-    export class Header
+    export class Header implements IElement
     {
         public readonly domElement = document.createElement("th")
-        public constructor(...items: Array<HTMLContent>)
+        public constructor(...items: Array<HTMLContentLike>)
         {
             this.append(...items)
         }
-        public append(...items: Array<HTMLContent>)
+        public append(...items: Array<HTMLContentLike>)
         {
-            this.domElement.append(...items)
+            this.domElement.append(...resolveContent(items))
             return this
         }
     }
-    export class Row
+    export class Row implements IElement
     {
         public readonly domElement = document.createElement("tr")
         public constructor(...cells: Array<Cell>)
@@ -70,21 +70,21 @@ namespace Table
             this.domElement.append(...cells.map((cell) => cell.domElement))
             return this
         }
-        public addCell(...items: Array<HTMLContent>)
+        public addCell(...items: Array<HTMLContentLike>)
         {
             return this.append(new Cell(...items))
         }
     }
-    export class Cell
+    export class Cell implements IElement
     {
         public readonly domElement = document.createElement("td")
-        public constructor(...items: Array<HTMLContent>)
+        public constructor(...items: Array<HTMLContentLike>)
         {
             this.append(...items)
         }
-        public append(...items: Array<HTMLContent>)
+        public append(...items: Array<HTMLContentLike>)
         {
-            this.domElement.append(...items)
+            this.domElement.append(...resolveContent(items))
             return this
         }
     }
