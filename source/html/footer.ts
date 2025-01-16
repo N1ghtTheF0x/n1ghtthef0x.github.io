@@ -7,7 +7,6 @@ function Footer()
 {
     const footer = createElementWithId("footer",FOOTER_ID)
     footer.innerText = `last updated: ${__LAST_UPDATED}`
-    console.log()
     return footer
 }
 

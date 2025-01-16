@@ -15,3 +15,7 @@ header {
 img {
     image-rendering: pixelated;
 }
+
+p {
+    margin-left: 1%;
+}

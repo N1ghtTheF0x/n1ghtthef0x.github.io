@@ -24,24 +24,16 @@ export function resolveContent(content: Array<HTMLContentLike>): Array<HTMLConte
     })
 }
 
-export function loadImage(src: string,alt: string)
+export function loadImage(src: string,alt: string,width?: number,height?: number)
 {
     const img = new Image()
+    if(typeof width == "number")
+        img.width = width
+    if(typeof height == "number")
+        img.height = height
     img.src = src
     img.alt = alt
     return img
-}
-
-export function loadImageAsync(src: string,alt: string)
-{
-    return new Promise<HTMLImageElement>((resolve,reject) =>
-    {
-        const img = new Image
-        img.src = src
-        img.alt = alt
-        img.onload = () => resolve(img)
-        img.onerror = () => reject()
-    })
 }
 
 export const HIGHLIGHT_CLASS = "highlight"

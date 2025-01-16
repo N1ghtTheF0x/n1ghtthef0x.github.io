@@ -7,7 +7,6 @@ import { MAIN } from "../../html/content"
 
 function initDefaultPlatform()
 {
-    console.info("loading default platform")
     APP_DIV.append(
         Header(),
         seperator(),

@@ -14,7 +14,6 @@ export const BOTTOM_SCREEN_3DS = createElementWithId("div","bottom-3ds")
 
 function init3DSPlatform()
 {
-    console.info("loading 3ds platform")
     // viewport shit
     const viewport = document.querySelector("meta[name=viewport]")
     viewport?.setAttribute("content","width=400, initial-scale=1")

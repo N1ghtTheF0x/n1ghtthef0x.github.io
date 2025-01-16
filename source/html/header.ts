@@ -8,7 +8,7 @@ export const TITLE_CHAR_CLASS = "header-title-char"
 
 function _load_icon()
 {
-    const icon = loadImage("/favicon.ico","Icon")
+    const icon = loadImage("/favicon.ico","Icon of webpage")
 
     icon.id = ICON_ID
     icon.width = icon.height = 128
