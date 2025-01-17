@@ -19,3 +19,8 @@ img {
 p {
     margin-left: 1%;
 }
+
+::selection {
+    background-color: darkgreen;
+    color: black;
+}

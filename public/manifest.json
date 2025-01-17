@@ -1,0 +1,53 @@
+{
+    "short_name": "NTF's Page",
+    "name": "N1ghtTheF0x's Page",
+    "description": "N1ghtTheF0x's personal Page",
+    "icons": [
+        {
+            "src": "/favicon.ico",
+            "sizes": "16x16",
+            "type": "image/x-icon"
+        },
+        {
+            "src": "/icon16.png",
+            "sizes": "16x16",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon128.png",
+            "sizes": "128x128",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "/wide.png",
+            "sizes": "1280x720",
+            "type": "image/png",
+            "form_factor": "wide",
+            "label": "Desktop banner of N1ghtTheF0x's personal page"
+        },
+        {
+            "src": "/narrow.png",
+            "sizes": "720x1280",
+            "type": "image/png",
+            "form_factor": "narrow",
+            "label": "Mobile banner of N1ghtTheF0x's personal page"
+        }
+    ],
+    "start_url": ".",
+    "id": "/",
+    "display": "browser",
+    "theme_color": "#000000",
+    "background_color": "#000000"
+}
