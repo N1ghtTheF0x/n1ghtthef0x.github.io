@@ -1,6 +1,6 @@
 import { createElementWithId } from "./element"
 import "./footer.css"
-import Socials from "./Socials"
+import Socials from "./socials"
 
 export const FOOTER_ID = "end-of-page"
 
