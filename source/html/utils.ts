@@ -37,3 +37,8 @@ export function loadImage(src: string,alt: string,width?: number,height?: number
 }
 
 export const HIGHLIGHT_CLASS = "highlight"
+
+export const isPortrait = screen.orientation.type.startsWith("portrait")
+export const isLandscape = screen.orientation.type.startsWith("landscape")
+export const isPrimaryOrientation = screen.orientation.type.endsWith("primary")
+export const isSecondaryOrientation = screen.orientation.type.endsWith("secondary")

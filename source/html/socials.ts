@@ -1,6 +1,7 @@
 import { createAnchor } from "./anchor"
 import { createElementWithId } from "./element"
-import { loadImage } from "./utils"
+import { HIGHLIGHT_CLASS, loadImage } from "./utils"
+import "./socials.css"
 
 export const SOCIALS_ID = "socials"
 
@@ -13,7 +14,9 @@ function _create_social(img: string,name: string,href: string)
 {
     const logo = loadImage(img,`Logo of ${name}`,32,32)
 
-    return createAnchor(href,logo)
+    logo.classList.add(HIGHLIGHT_CLASS)
+
+    return createAnchor(href, logo)
 }
 
 function Socials()
