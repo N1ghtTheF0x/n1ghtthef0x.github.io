@@ -4,7 +4,10 @@ export const TITLE = "N1ghtTheF0x's Page"
 
 export const br = () => document.createElement("br")
 export const seperator = () => document.createElement("hr")
-export const p = (...content: Array<HTMLContent>) => createElementWithContent("p",...content)
+
+export const p = (...content: Array<HTMLContentLike>) => createElementWithContent("p",...resolveContent(content))
+export const bold = (...content: Array<HTMLContentLike>) => createElementWithContent("b",...resolveContent(content))
+export const important = (...content: Array<HTMLContentLike>) => createElementWithContent("strong",...resolveContent(content))
 
 export interface IElement
 {

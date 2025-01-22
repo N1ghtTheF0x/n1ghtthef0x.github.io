@@ -21,9 +21,10 @@ function _create_title()
 {
     const title = createElementWithId("div",TITLE_ID)
 
-    const chars = document.title.split("").map((char) =>
+    const chars = document.title.split("").map((char,index) =>
     {
         const span = createElementWithClass("span",TITLE_CHAR_CLASS,HIGHLIGHT_CLASS)
+        span.style.animationDelay = `${index * 10}ms`
         span.innerText = char
         return span
     })

@@ -11,6 +11,17 @@
 				"runOn": "folderOpen",
 				"instanceLimit": 1
 			}
+		},
+		{
+			"type": "npm",
+			"script": "build",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": [],
+			"label": "npm: build",
+			"detail": "tsc && vite build"
 		}
 	]
 }

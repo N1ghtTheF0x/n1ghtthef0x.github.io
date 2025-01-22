@@ -1,12 +1,12 @@
 import { createList } from "../list"
-import { p } from "../utils"
+import { important, p } from "../utils"
 
 export default [
-    p("DISCLAIMER: this website is still work in progress!"),
+    p(important("DISCLAIMER: this website is still work in progress!")),
     p(
         "Welcome to my personal page! Here you can find",
         createList(false,[
-            ["my (personal) projects"],
+            ["projects that I've worked on"],
             ["secrets :O"]
         ]),
         "Use the navigation bar above to select a page"

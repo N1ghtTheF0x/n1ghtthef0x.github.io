@@ -12,7 +12,15 @@ export default new Article("Projects",p("Here are projects that I created/finish
         createAnchor("https://github.com/N1ghtTheF0x/GENOMENAL-ADVENTURES-OF-DR.-W","The Genomenal Adventures of Dr. W"),
         " is a small game that I created for ",
         createAnchor("https://igem.org/","International Genetically Engineered Machine (iGEM)"),
-        " when I was contacted by TU Darmstadt team to create a game for their B-TOX project"
+        "."
+    ),
+    p(
+        "I was contacted by TU Darmstadt team to create a game for their B-TOX project"
+    ),
+    p(
+        "You can find more information ",
+        createAnchor("https://2020.igem.org/Team:TU_Darmstadt/Education#Minigame","here"),
+        "."
     )
 )
 .addSection(
@@ -22,5 +30,14 @@ export default new Article("Projects",p("Here are projects that I created/finish
         createAnchor("https://github.com/ThemModdingHerds/velvet-beautifier","Velvet Beautifier"),
         " is a modding tool/loader for the game ",
         createAnchor("https://store.steampowered.com/app/574980/Thems_Fightin_Herds/","Them's Fightin' Herds")
+    ),
+    p(
+        "It started as learning on how mod loaders work to being one."
+    ),
+    p(
+        "You can download it from ",
+        createAnchor("https://github.com/ThemModdingHerds/velvet-beautifier/releases/latest","GitHub"),
+        " or ",
+        createAnchor("https://gamebanana.com/tools/15674","GameBanana")
     )
 )

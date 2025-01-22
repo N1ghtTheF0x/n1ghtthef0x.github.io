@@ -24,3 +24,8 @@ p {
     background-color: darkgreen;
     color: black;
 }
+
+main {
+    animation-name: opacity;
+    animation-duration: 1s;
+}

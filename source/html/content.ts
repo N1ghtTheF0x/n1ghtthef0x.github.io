@@ -1,4 +1,4 @@
-import Default from "./content/Main"
+import Index from "./content/Index"
 import Projects from "./content/Projects"
 import { HTMLContentLike, resolveContent, TITLE } from "./utils"
 
@@ -6,7 +6,7 @@ export type ContentName = "Index" | "Projects"
 
 export const MAIN = document.createElement("main")
 export const CONTENT: Record<ContentName,Array<HTMLContentLike> | HTMLContentLike> = {
-    "Index": Default,
+    "Index": Index,
     "Projects": Projects
 } as const
 

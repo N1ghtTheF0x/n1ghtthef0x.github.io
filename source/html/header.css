@@ -1,6 +1,16 @@
+#header-icon {
+    animation-name: header-icon-intro;
+    animation-duration: 1s;
+}
+
 #header-title {
     font-weight: bold;
     font-size: xx-large;
+}
+
+#header-title {
+    animation-name: header-title-char-intro;
+    animation-duration: 2s;
 }
 
 .header-title-char:hover {
@@ -9,4 +19,26 @@
 
 .header-title-char:active {
     color: cyan;
+}
+
+@keyframes header-icon-intro {
+    from {
+        translate: -1vw 0;
+        opacity: 0;
+    }
+    to {
+        translate: 0 0;
+        opacity: 1;
+    }
+}
+
+@keyframes header-title-char-intro {
+    from {
+        translate: 100vw 0;
+        opacity: 0;
+    }
+    to {
+        translate: 0 0;
+        opacity: 1;
+    }
 }
