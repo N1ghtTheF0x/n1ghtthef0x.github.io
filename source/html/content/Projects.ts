@@ -15,7 +15,7 @@ export default new Article("Projects",p("Here are projects that I created/finish
         "."
     ),
     p(
-        "I was contacted by TU Darmstadt team to create a game for their B-TOX project"
+        "I was contacted by the TU Darmstadt team to create a game for their B-TOX project."
     ),
     p(
         "You can find more information ",

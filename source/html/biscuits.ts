@@ -42,7 +42,8 @@ export function createBiscuitsBanner()
 
     const accept = createButton("Accept",() =>
     {
-        document.cookie = `${key}=${value}`
+        if(import.meta.env.PROD)
+            document.cookie = `${key}=${value}`
         banner.remove()
     })
     accept.classList.add(HIGHLIGHT_CLASS)
@@ -60,6 +61,6 @@ export function createBiscuitsBanner()
 
 export function initBiscuits()
 {
-    if(hasBiscuits()) return
+    if(hasBiscuits() && import.meta.env.PROD) return
     APP_DIV.append(createBiscuitsBanner())
 }

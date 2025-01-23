@@ -13,6 +13,13 @@
     font-size: larger;
     user-select: none;
     padding-bottom: 1%;
+    opacity: 0;
+    
+    animation-name: biscuit-intro;
+    animation-duration: 1s;
+    animation-delay: 5s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
 }
 
 #biscuits-accept {
@@ -27,4 +34,13 @@
 #biscuits-icon {
     font-style: normal;
     user-select: none;
+}
+
+@keyframes biscuit-intro {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }

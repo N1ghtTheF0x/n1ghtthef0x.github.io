@@ -1,7 +1,7 @@
 import Table from "./table"
 import "./navigation.css"
 import { createButton } from "./button"
-import { HIGHLIGHT_CLASS, resolveContent } from "./utils"
+import { HIGHLIGHT_CLASS, resolveContent, seperator } from "./utils"
 import { CONTENT, initContent } from "./content"
 
 export const NAV_ITEM_CLASS = "nav-item"
@@ -27,7 +27,9 @@ function Navigation()
     table.addBodyRow(cell)
 
     nav.append(...resolveContent([
-        table
+        seperator(),
+        table,
+        seperator()
     ]))
     return nav
 }

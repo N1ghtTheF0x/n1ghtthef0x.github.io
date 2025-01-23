@@ -4,21 +4,32 @@
 }
 
 #header-title {
+    display: flex;
     font-weight: bold;
     font-size: xx-large;
 }
 
-#header-title {
+.header-title-char {
     animation-name: header-title-char-intro;
     animation-duration: 2s;
 }
 
 .header-title-char:hover {
     color: darkcyan;
+    translate: 0 -0.25vw;
 }
 
 .header-title-char:active {
     color: cyan;
+}
+
+#header-title-postfix {
+    opacity: 0;
+
+    animation-name: opacity;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
 }
 
 @keyframes header-icon-intro {

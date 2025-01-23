@@ -1,6 +1,8 @@
 import { createElementWithContent } from "./element"
 
-export const TITLE = "N1ghtTheF0x's Page"
+export const AUTHOR = "N1ghtTheF0x"
+export const TITLE_POSTFIX = "'s Page"
+export const TITLE = `${AUTHOR}${TITLE_POSTFIX}`
 
 export const br = () => document.createElement("br")
 export const seperator = () => document.createElement("hr")

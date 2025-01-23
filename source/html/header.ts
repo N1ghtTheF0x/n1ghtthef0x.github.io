@@ -1,10 +1,11 @@
-import { HIGHLIGHT_CLASS, loadImage } from "./utils"
+import { AUTHOR, HIGHLIGHT_CLASS, loadImage, TITLE_POSTFIX } from "./utils"
 import "./header.css"
 import { createElementWithClass, createElementWithId } from "./element"
 
 export const ICON_ID = "header-icon"
 export const TITLE_ID = "header-title"
 export const TITLE_CHAR_CLASS = "header-title-char"
+export const TITLE_POSTFIX_ID = "header-title-postfix"
 
 function _load_icon()
 {
@@ -21,15 +22,17 @@ function _create_title()
 {
     const title = createElementWithId("div",TITLE_ID)
 
-    const chars = document.title.split("").map((char,index) =>
+    const author = AUTHOR.split("").map((char,index) =>
     {
-        const span = createElementWithClass("span",TITLE_CHAR_CLASS,HIGHLIGHT_CLASS)
+        const span = createElementWithClass("div",TITLE_CHAR_CLASS,HIGHLIGHT_CLASS)
         span.style.animationDelay = `${index * 10}ms`
         span.innerText = char
         return span
     })
+    const postfix = createElementWithId("div",TITLE_POSTFIX_ID)
+    postfix.innerText = TITLE_POSTFIX
 
-    title.append(...chars)
+    title.append(...author,postfix)
 
     return title
 }

@@ -29,4 +29,8 @@ export function initInput()
         if(isKonamiCode())
             _on_konami_code()
     })
+    window.addEventListener("wheel",(ev) =>
+    {
+        window.scrollBy({behavior: "instant",top: ev.deltaY})
+    })
 }

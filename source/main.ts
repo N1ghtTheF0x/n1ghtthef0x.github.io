@@ -10,4 +10,5 @@ initContent()
 initBiscuits()
 initInput()
 
+if(import.meta.env.PROD)
 console.warn("Listen dude, you won't find anything here")

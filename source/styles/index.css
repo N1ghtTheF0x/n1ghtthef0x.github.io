@@ -2,6 +2,7 @@ body {
     color: white;
     background-color: black;
     font-family: monospace;
+    overflow: hidden;
 }
 
 a {
@@ -23,6 +24,14 @@ p {
 ::selection {
     background-color: darkgreen;
     color: black;
+}
+
+nav {
+    opacity: 0;
+
+    animation-name: opacity;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
 }
 
 main {
