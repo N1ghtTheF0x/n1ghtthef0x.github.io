@@ -1,18 +1,25 @@
 import Index from "./content/Index"
 import Projects from "./content/Projects"
+import Streamer from "./content/Streamer"
 import { HTMLContentLike, resolveContent, TITLE } from "./utils"
 
-export type ContentName = "Index" | "Projects"
-
 export const MAIN = document.createElement("main")
-export const CONTENT: Record<ContentName,Array<HTMLContentLike> | HTMLContentLike> = {
+export type Content<Names extends string> = Record<Names,Array<HTMLContentLike> | HTMLContentLike>
+
+export type ContentName = "Index" | "Projects"
+export const AVAILABLE_CONTENT: Content<ContentName> = {
     "Index": Index,
     "Projects": Projects
-} as const
+}
 
-export type Content = typeof CONTENT
+export type HiddenContentName = "Streamer"
+export const HIDDEN_CONTENT: Content<HiddenContentName> = {
+    "Streamer": Streamer
+}
 
-export function switchContent(name: ContentName)
+export const CONTENT = {...AVAILABLE_CONTENT,...HIDDEN_CONTENT} as const
+
+export function switchContent(name: ContentName | HiddenContentName)
 {
     const content = CONTENT[name]
     MAIN.innerHTML = ""

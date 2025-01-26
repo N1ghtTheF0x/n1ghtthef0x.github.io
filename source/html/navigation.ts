@@ -2,7 +2,7 @@ import Table from "./table"
 import "./navigation.css"
 import { createButton } from "./button"
 import { HIGHLIGHT_CLASS, resolveContent, seperator } from "./utils"
-import { CONTENT, initContent } from "./content"
+import { AVAILABLE_CONTENT, initContent } from "./content"
 
 export const NAV_ITEM_CLASS = "nav-item"
 
@@ -12,7 +12,7 @@ function Navigation()
 
     const table = new Table
 
-    const buttons = Object.keys(CONTENT)
+    const buttons = Object.keys(AVAILABLE_CONTENT)
     .map((name) =>
     {
         const button = createButton(name,() =>
