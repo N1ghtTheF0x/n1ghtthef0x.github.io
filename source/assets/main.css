@@ -1,0 +1,56 @@
+body {
+    font-family: monospace;
+    color: white;
+    background-color: black;
+    image-rendering: pixelated;
+}
+
+footer {
+    color: lightgray;
+    font-style: italic;
+}
+
+image {
+    max-width: 320px;
+}
+
+a, a:link {
+    color: cyan;
+}
+
+a:visited {
+    color: aquamarine;
+}
+
+a:hover {
+    color: lightskyblue
+}
+
+a:active {
+    color: darkcyan;
+}
+
+.nav-items, .nav-items:link {
+    color: black;
+    background-color: white;
+    font-size: larger;
+    text-decoration: none;
+    padding: 2px;
+}
+
+.nav-items:visited {
+    color: black;
+}
+
+.nav-items:hover {
+    color: white;
+    background-color: black;
+    text-decoration: underline;
+    padding: 3px;
+    border: white solid 1px;
+}
+
+.nav-items:active {
+    color: black;
+    background-color: grey;
+}

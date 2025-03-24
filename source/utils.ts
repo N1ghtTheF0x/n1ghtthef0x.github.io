@@ -1,1 +1,0 @@
-export const APP_DIV = document.getElementById("app") as HTMLDivElement

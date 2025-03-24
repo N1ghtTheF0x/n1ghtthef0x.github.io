@@ -1,0 +1,16 @@
+.project {
+
+}
+
+.project-image {
+    width: 480px;
+}
+
+@media only screen and (max-width: 600px)
+{
+    .project-image {
+        width: 300px;
+        display: block;
+        margin: auto;
+    }
+}

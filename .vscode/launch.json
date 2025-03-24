@@ -6,7 +6,11 @@
             "request": "launch",
             "type": "chrome",
             "url": "http://localhost:5173",
-            "webRoot": "${workspaceFolder}"
+            "webRoot": "${workspaceFolder}/dist",
+            "server":{
+                "program": "express.cjs"
+            },
+            "disableNetworkCache": true
         }
     ]
 }

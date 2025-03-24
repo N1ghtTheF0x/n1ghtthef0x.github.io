@@ -1,1 +1,1 @@
-# [Page Link](https://n1ghtthef0x.github.io)
+# [Page Link](https://nightthefox.neocities.org/)
